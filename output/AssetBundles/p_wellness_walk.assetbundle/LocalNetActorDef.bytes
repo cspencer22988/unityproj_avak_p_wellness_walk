@@ -1,0 +1,383 @@
+{
+	"rooms": 
+		[
+			{
+				"r": "create_actors",
+				"actor_data": 
+					[
+						{
+							"actor_id": "Med_spot",
+							"components": 
+								[
+									{
+										"type": "volume_trigger",
+										"volume_data": 
+											[
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															-9.487092,
+															-0.71,
+															-9.382569
+														],
+													"extents": 
+														[
+															0.729084253,
+															0.355370432,
+															0.6634635
+														],
+													"rotation": 
+														[
+															0,
+															125.191124,
+															0
+														]
+												},
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															-9.548761,
+															-0.71,
+															-10.0697031
+														],
+													"extents": 
+														[
+															0.3174113,
+															0.35537,
+															0.354415119
+														],
+													"rotation": 
+														[
+															0,
+															113.010628,
+															0
+														]
+												},
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															-10.2242451,
+															-0.71,
+															-9.416187
+														],
+													"extents": 
+														[
+															0.306304127,
+															0.35537,
+															0.354415178
+														],
+													"rotation": 
+														[
+															0,
+															155.01178,
+															0
+														]
+												},
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															-9.458761,
+															-0.71,
+															-8.664702
+														],
+													"extents": 
+														[
+															0.317411482,
+															0.35537,
+															0.3544153
+														],
+													"rotation": 
+														[
+															0,
+															113.010628,
+															0
+														]
+												},
+												{
+													"collision_type": "box",
+													"center": 
+														[
+															-8.793245,
+															-0.71,
+															-9.323188
+														],
+													"extents": 
+														[
+															0.306303978,
+															0.35537,
+															0.354415029
+														],
+													"rotation": 
+														[
+															0,
+															155.01178,
+															0
+														]
+												}
+											],
+										"trigger_type": "local"
+									},
+									{
+										"type": "net_actor_node",
+										"inputs": 
+											[
+												{
+													"input_port": "med_spot_appear",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "med_spot_appear",
+																		"wrap_mode": "once",
+																		"switch_mode": "blend"
+																	}
+															}
+														]
+												},
+												{
+													"input_port": "med_spot_disappear",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "med_spot_disappear",
+																		"wrap_mode": "once"
+																	}
+															}
+														]
+												}
+											],
+										"outputs": 
+											[
+												{
+													"output_port": "volume_trigger_enter_first",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "Med_spot",
+																"input_port": "med_spot_appear"
+															}
+														]
+												},
+												{
+													"output_port": "volume_trigger_exit_all",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "Med_spot",
+																"input_port": "med_spot_disappear"
+															}
+														]
+												}
+											]
+									},
+									{
+										"type": "model",
+										"version": 1,
+										"game_asset_url": "sceneref://Room_0/InteractiveObjects/Med_spot"
+									}
+								],
+							"actions": 
+								[
+									{
+										"a": "position",
+										"o": 
+											[
+												0,
+												0,
+												0
+											],
+										"uid": "local"
+									},
+									{
+										"a": "model_set_visible",
+										"uid": "local",
+										"p": 
+											{
+												"method": "Immediate",
+												"visible": true
+											}
+									}
+								]
+						},
+						{
+							"actor_id": "Parrot_speak",
+							"components": 
+								[
+									{
+										"type": "volume_trigger",
+										"volume_data": 
+											[
+												{
+													"collision_type": "sphere",
+													"center": 
+														[
+															6.46489048,
+															3.64,
+															-23.3363762
+														],
+													"radius": 3.00000143
+												}
+											],
+										"trigger_type": "local"
+									},
+									{
+										"type": "net_actor_node",
+										"inputs": 
+											[
+												{
+													"input_port": "parrot_speak1",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "parrot_speak1",
+																		"wrap_mode": "once",
+																		"switch_mode": "blend"
+																	}
+															}
+														]
+												},
+												{
+													"input_port": "parrot_speak2",
+													"actions": 
+														[
+															{
+																"a": "model_animation",
+																"r": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"o": 
+																	[
+																		0,
+																		0,
+																		0
+																	],
+																"uid": "local",
+																"p": 
+																	{
+																		"name": "parrot_speak2",
+																		"wrap_mode": "once"
+																	}
+															}
+														]
+												}
+											],
+										"outputs": 
+											[
+												{
+													"output_port": "volume_trigger_enter_any",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "Parrot_speak",
+																"input_port": "parrot_speak1"
+															}
+														]
+												},
+												{
+													"output_port": "volume_trigger_exit_all",
+													"cooldown": 2,
+													"output_port_data": 
+														[
+															{
+																"type": "local_wiring",
+																"actor_id": "Parrot_speak",
+																"input_port": "parrot_speak2"
+															}
+														]
+												}
+											]
+									},
+									{
+										"type": "model",
+										"version": 1,
+										"game_asset_url": "sceneref://Room_0/InteractiveObjects/Parrot_speak"
+									}
+								],
+							"actions": 
+								[
+									{
+										"a": "position",
+										"o": 
+											[
+												-20.021,
+												-3.741,
+												0.272937775
+											],
+										"uid": "local"
+									},
+									{
+										"a": "model_set_visible",
+										"uid": "local",
+										"p": 
+											{
+												"method": "Immediate",
+												"visible": true
+											}
+									}
+								]
+						}
+					]
+			},
+			{}
+		]
+}
